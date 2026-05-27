@@ -1,0 +1,11 @@
+{
+  "name": "seda-product-designer-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start-assignment": "node recorder/watch.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

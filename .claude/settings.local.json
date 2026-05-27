@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/cokoroad/seda/design-agent/tokens/**)",
+      "Read(//Users/cokoroad/seda/design-agent/components/**)"
+    ]
+  }
+}
