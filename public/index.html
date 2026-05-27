@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>SEDA — Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app" data-app-lang="en">
+      <main class="screens">
+        <section class="screen" data-screen="home" hidden>
+          <div class="screen-placeholder">
+            <p class="screen-placeholder__title">홈</p>
+            <p class="screen-placeholder__desc">기존 탭 — 과제 범위 외</p>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="learning" hidden>
+          <div class="screen-placeholder">
+            <p class="screen-placeholder__title">학습</p>
+            <p class="screen-placeholder__desc">기존 탭 — 과제 범위 외</p>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="activity" hidden>
+          <div class="screen-placeholder">
+            <p class="screen-placeholder__title">활동</p>
+            <p class="screen-placeholder__desc">기존 탭 — 과제 범위 외</p>
+          </div>
+        </section>
+
+        <section class="screen screen--community" data-screen="community">
+          <div class="top-bar">
+            <div class="status-bar" aria-hidden="true">
+              <span class="status-bar__time">9:30</span>
+              <div class="status-bar__icons">
+                <svg class="status-bar__signal" viewBox="0 0 18 12" fill="currentColor" aria-hidden="true">
+                  <rect x="0" y="8" width="3" height="4" rx="0.5" />
+                  <rect x="5" y="5" width="3" height="7" rx="0.5" />
+                  <rect x="10" y="2" width="3" height="10" rx="0.5" />
+                  <rect x="15" y="0" width="3" height="12" rx="0.5" />
+                </svg>
+                <svg class="status-bar__battery" viewBox="0 0 24 12" fill="none" aria-hidden="true">
+                  <rect x="0.5" y="0.5" width="20" height="11" rx="2" stroke="currentColor" />
+                  <rect x="2" y="2" width="14" height="8" rx="1" fill="currentColor" />
+                  <rect x="21" y="3.5" width="2.5" height="5" rx="0.5" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+            <header class="home-header">
+              <a href="#" class="home-header__brand" aria-label="SEDA home">
+                <svg class="home-header__logo" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                  <path
+                    d="M10 8.5C10 5.5 13 3.5 17 3.5c4.5 0 7.5 2 7.5 5.2 0 2.4-1.8 4.2-5.2 5l-2.6.6C12.8 15.2 10 17 10 20c0 3.8 3.8 6.5 9.5 6.5 4.2 0 7.8-1.6 9.5-4.2"
+                    stroke="#2563EB"
+                    stroke-width="3.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M22 23.5C22 26.5 19 28.5 15 28.5 10.5 28.5 7.5 26.5 7.5 23.3c0-2.4 1.8-4.2 5.2-5l2.6-.6C19.2 16.8 22 15 22 12c0-3.8-3.8-6.5-9.5-6.5-4.2 0-7.8 1.6-9.5 4.2"
+                    stroke="#2563EB"
+                    stroke-width="3.2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span class="home-header__wordmark">SEDA</span>
+              </a>
+              <div class="home-header__actions">
+                <button type="button" class="streak-badge" aria-label="1-day streak">
+                  <svg class="streak-badge__flame" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 22c4-2.5 7-6.5 7-11.5C19 6.5 16 4 12 2 8 4 5 6.5 5 10.5 5 15.5 8 19.5 12 22z" fill="#F59E0B" />
+                    <path d="M12 18c2-1.5 3.5-3.5 3.5-6 0-2-1.2-3.5-3.5-5-2.3 1.5-3.5 3-3.5 5 0 2.5 1.5 4.5 3.5 6z" fill="#FBBF24" />
+                  </svg>
+                  <span class="streak-badge__count">1</span>
+                </button>
+                <button type="button" class="home-header__notify" aria-label="Notifications">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.25-6.77V3.5a1.25 1.25 0 1 0-2.5 0v.73A7 7 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </header>
+          </div>
+
+          <div class="filter-bar">
+            <div class="filter-chips" id="filter-chips">
+              <button
+                type="button"
+                class="filter-chip filter-chip--search"
+                id="search-toggle"
+                aria-label="Search"
+                aria-expanded="false"
+                aria-controls="filter-search"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2" />
+                  <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+              <div class="filter-search" id="filter-search" hidden>
+                <svg class="filter-search__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2" />
+                  <path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <input
+                  type="search"
+                  class="filter-search__input"
+                  id="search-input"
+                  placeholder="Search"
+                  autocomplete="off"
+                  enterkeyhint="search"
+                />
+                <button type="button" class="filter-search__clear" id="search-clear" hidden aria-label="Clear search">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+              <div class="filter-chips__types" role="tablist" aria-label="Post type filter">
+                <button type="button" class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button type="button" class="filter-chip" data-filter="study" role="tab" aria-selected="false">Grammar</button>
+                <button type="button" class="filter-chip" data-filter="life" role="tab" aria-selected="false">Life in Korea</button>
+                <button type="button" class="filter-chip" data-filter="job" role="tab" aria-selected="false">Career</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="feed" id="feed" aria-live="polite"></div>
+
+          <button type="button" class="fab" id="fab-compose" aria-label="Write post">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </section>
+
+        <section class="screen" data-screen="my" hidden>
+          <div class="screen-placeholder">
+            <p class="screen-placeholder__title">마이</p>
+            <p class="screen-placeholder__desc">기존 탭 — 과제 범위 외</p>
+          </div>
+        </section>
+      </main>
+
+      <nav class="gnb" aria-label="Bottom tabs">
+        <button type="button" class="gnb-item" data-tab="home">
+          <span class="gnb-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z" /></svg>
+          </span>
+          <span class="gnb-item__label">홈</span>
+        </button>
+        <button type="button" class="gnb-item" data-tab="learning">
+          <span class="gnb-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2ZM6 4h5v8l-2.5-1.5L6 12V4z" /></svg>
+          </span>
+          <span class="gnb-item__label">학습</span>
+        </button>
+        <button type="button" class="gnb-item" data-tab="activity">
+          <span class="gnb-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <rect x="5" y="13" width="3.5" height="7" rx="0.8" />
+              <rect x="10.25" y="9" width="3.5" height="11" rx="0.8" />
+              <rect x="15.5" y="5" width="3.5" height="15" rx="0.8" />
+            </svg>
+          </span>
+          <span class="gnb-item__label">활동</span>
+        </button>
+        <button type="button" class="gnb-item is-active" data-tab="community" aria-current="page">
+          <span class="gnb-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h7v-2.05c0-.45.18-.85.48-1.15A2.99 2.99 0 0 1 8 15c.83 0 1.58.34 2.12.88.3.3.48.7.48 1.15V19h7v-3.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.96.05 1.16.84 1.96 1.97 1.96 3.45V19h6v-3.5c0-2.33-4.67-3.5-7-3.5z"
+              />
+            </svg>
+          </span>
+          <span class="gnb-item__label">커뮤니티</span>
+        </button>
+        <button type="button" class="gnb-item" data-tab="my">
+          <span class="gnb-item__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.31 0-6 1.79-6 4v2h12v-2c0-2.21-2.69-4-6-4z" />
+            </svg>
+          </span>
+          <span class="gnb-item__label">마이</span>
+        </button>
+      </nav>
+
+      <div class="sheet" id="compose-sheet" hidden>
+        <div class="sheet__backdrop" data-close-sheet></div>
+        <div class="sheet__panel" role="dialog" aria-labelledby="compose-title">
+          <header class="sheet__header">
+            <button type="button" class="sheet__close" data-close-sheet aria-label="Cancel">Cancel</button>
+            <h2 id="compose-title">New post</h2>
+            <button type="button" class="sheet__submit" disabled>Post</button>
+          </header>
+          <p class="sheet__hint">Compose screen is out of scope. This sheet shows the FAB entry path only.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
