@@ -89,9 +89,9 @@ const POSTS = [
 ];
 
 const TYPE_LABELS = {
-  study: "학습 질문",
-  life: "한국 생활",
-  job: "취업 정보",
+  study: "Grammar",
+  life: "Life in Korea",
+  job: "Career",
 };
 
 let activeFilter = "all";

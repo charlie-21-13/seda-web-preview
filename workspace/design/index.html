@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>SEDA — 커뮤니티</title>
+    <title>SEDA — Community</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Poppins: EN display ≥20px | SF Pro Text: EN body ≤19px (system on Apple) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -19,7 +18,6 @@
   </head>
   <body>
     <div class="app" data-app-lang="en">
-      <!-- Tab panels: only Community is fully built -->
       <main class="screens">
         <section class="screen" data-screen="home" hidden>
           <div class="screen-placeholder">
@@ -42,7 +40,6 @@
           </div>
         </section>
 
-        <!-- Community: Threads-style feed -->
         <section class="screen screen--community" data-screen="community">
           <div class="top-bar">
             <div class="status-bar" aria-hidden="true">
@@ -62,7 +59,7 @@
               </div>
             </div>
             <header class="home-header">
-              <a href="#" class="home-header__brand" aria-label="SEDA 홈">
+              <a href="#" class="home-header__brand" aria-label="SEDA home">
                 <svg class="home-header__logo" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                   <path
                     d="M10 8.5C10 5.5 13 3.5 17 3.5c4.5 0 7.5 2 7.5 5.2 0 2.4-1.8 4.2-5.2 5l-2.6.6C12.8 15.2 10 17 10 20c0 3.8 3.8 6.5 9.5 6.5 4.2 0 7.8-1.6 9.5-4.2"
@@ -80,20 +77,14 @@
                 <span class="home-header__wordmark">SEDA</span>
               </a>
               <div class="home-header__actions">
-                <button type="button" class="streak-badge" aria-label="연속 학습 1일">
+                <button type="button" class="streak-badge" aria-label="1-day streak">
                   <svg class="streak-badge__flame" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path
-                      d="M12 22c4-2.5 7-6.5 7-11.5C19 6.5 16 4 12 2 8 4 5 6.5 5 10.5 5 15.5 8 19.5 12 22z"
-                      fill="#F59E0B"
-                    />
-                    <path
-                      d="M12 18c2-1.5 3.5-3.5 3.5-6 0-2-1.2-3.5-3.5-5-2.3 1.5-3.5 3-3.5 5 0 2.5 1.5 4.5 3.5 6z"
-                      fill="#FBBF24"
-                    />
+                    <path d="M12 22c4-2.5 7-6.5 7-11.5C19 6.5 16 4 12 2 8 4 5 6.5 5 10.5 5 15.5 8 19.5 12 22z" fill="#F59E0B" />
+                    <path d="M12 18c2-1.5 3.5-3.5 3.5-6 0-2-1.2-3.5-3.5-5-2.3 1.5-3.5 3-3.5 5 0 2.5 1.5 4.5 3.5 6z" fill="#FBBF24" />
                   </svg>
                   <span class="streak-badge__count">1</span>
                 </button>
-                <button type="button" class="home-header__notify" aria-label="알림">
+                <button type="button" class="home-header__notify" aria-label="Notifications">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path
                       d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.25-6.77V3.5a1.25 1.25 0 1 0-2.5 0v.73A7 7 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z"
@@ -139,25 +130,17 @@
                 </button>
               </div>
               <div class="filter-chips__types" role="tablist" aria-label="Post type filter">
-            <button type="button" class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true">
-              전체
-            </button>
-            <button type="button" class="filter-chip" data-filter="study" role="tab" aria-selected="false">
-              학습 질문
-            </button>
-            <button type="button" class="filter-chip" data-filter="life" role="tab" aria-selected="false">
-              한국 생활
-            </button>
-            <button type="button" class="filter-chip" data-filter="job" role="tab" aria-selected="false">
-              취업 정보
-            </button>
+                <button type="button" class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button type="button" class="filter-chip" data-filter="study" role="tab" aria-selected="false">Grammar</button>
+                <button type="button" class="filter-chip" data-filter="life" role="tab" aria-selected="false">Life in Korea</button>
+                <button type="button" class="filter-chip" data-filter="job" role="tab" aria-selected="false">Career</button>
               </div>
             </div>
           </div>
 
           <div class="feed" id="feed" aria-live="polite"></div>
 
-          <button type="button" class="fab" id="fab-compose" aria-label="글쓰기">
+          <button type="button" class="fab" id="fab-compose" aria-label="Write post">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
             </svg>
@@ -172,21 +155,16 @@
         </section>
       </main>
 
-      <!-- Bottom GNB: 홈 · 학습 · 활동 · 커뮤니티 · 마이 -->
-      <nav class="gnb" aria-label="하단 탭">
+      <nav class="gnb" aria-label="Bottom tabs">
         <button type="button" class="gnb-item" data-tab="home">
           <span class="gnb-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z" />
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z" /></svg>
           </span>
           <span class="gnb-item__label">홈</span>
         </button>
         <button type="button" class="gnb-item" data-tab="learning">
           <span class="gnb-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2ZM6 4h5v8l-2.5-1.5L6 12V4z" />
-            </svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2ZM6 4h5v8l-2.5-1.5L6 12V4z" /></svg>
           </span>
           <span class="gnb-item__label">학습</span>
         </button>
@@ -213,25 +191,22 @@
         <button type="button" class="gnb-item" data-tab="my">
           <span class="gnb-item__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.31 0-6 1.79-6 4v2h12v-2c0-2.21-2.69-4-6-4z"
-              />
+              <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.31 0-6 1.79-6 4v2h12v-2c0-2.21-2.69-4-6-4z" />
             </svg>
           </span>
           <span class="gnb-item__label">마이</span>
         </button>
       </nav>
 
-      <!-- Compose sheet (entry only — full screen out of scope) -->
       <div class="sheet" id="compose-sheet" hidden>
         <div class="sheet__backdrop" data-close-sheet></div>
         <div class="sheet__panel" role="dialog" aria-labelledby="compose-title">
           <header class="sheet__header">
-            <button type="button" class="sheet__close" data-close-sheet aria-label="닫기">취소</button>
-            <h2 id="compose-title">새 글</h2>
-            <button type="button" class="sheet__submit" disabled>게시</button>
+            <button type="button" class="sheet__close" data-close-sheet aria-label="Cancel">Cancel</button>
+            <h2 id="compose-title">New post</h2>
+            <button type="button" class="sheet__submit" disabled>Post</button>
           </header>
-          <p class="sheet__hint">글쓰기 화면은 과제 범위 밖입니다. FAB으로 진입 경로만 확인하세요.</p>
+          <p class="sheet__hint">Compose screen is out of scope. This sheet shows the FAB entry path only.</p>
         </div>
       </div>
     </div>
